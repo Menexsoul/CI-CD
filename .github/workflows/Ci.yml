@@ -1,16 +1,16 @@
 name: CI Exercice 2
 on: [push, pull_request]
 jobs:
- test_job:
-   runs-on: ubuntu-latest
-   steps:
-   - name: Checkout repo
-     uses: actions/checkout@v3
-   - name: Setup Node.js
-     uses: actions/setup-node@v3
-     with:
-       node-version: 18
-   - name: Install dependencies
-     run: npm install
-   - name: Run tests
-     run: npm test
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm test
